@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            padding: 10% 20%;
+        }
+        #title{
+            text-align: center;
+            font-family: fantasy;
+            font-size: 250%;
+        }
+        p{
+            font-size: 20px;
+            margin-top: 20px;
+            margin-bottom: 40px;
+            text-align: justify;
+            text-align-last: center;
+        }
+        #name,#email,#number,select{
+            margin: 5px 0px 5px 25%;
+            width: 50%;
+            border-radius: 20px;
+            border: none;
+            padding: 5px;
+            background-color: lightgrey;
+            
+        }
+        .radio{
+            margin: 0 0 0 25%;
+        }
+        .checkbox{
+            margin-left: 25%;
+        }
+        textarea{
+            margin: 0 0 0 25%;
+            font-size: 15px;
+            font-family: cursive;
+            width: 50%;
+        }
+        #submit{
+            margin-left: 40%;
+            font-size: 20px;
+            padding: 5px 10px;
+            border-radius: 10px 20px;
+            border: none;
+            background-color: lightgreen;
+        }
+        label{
+            margin-left:25%;
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 id="title">Survey Form</h1>
+    <p>You have to fill all the details and this submission will be considered as the final submission and after this no one is allowed to change his or her details.</p>
+
+    <form id="survey-form">
+        <label id="name-label">Name : </label>
+        <input type="text" id="name" placeholder="Enter your name" required> <br>
+
+        <label id="email-label">Email : </label>
+        <input type="email" id="email" placeholder="Enter Email" required><br>
+
+        <label id="number-label">Mobile Number : </label>
+        <input type="number" id="number" placeholder="Enter your Mobile Number" min="10" max="12" required><br>
+        <br>
+        <label>Degree : </label><br>
+        <select id="dropdown">
+            <option value="none">-none-</option>
+            <option value="BSC">BSC</option>
+            <option value="LAW">LAW</option>
+            <option value="B.E./B.Tech">B.E./B.Tech</option>
+            <option value="Post Graduation">Post Graduation</option>
+        </select>
+        <br><br>
+        <label>Gender : </label><br>
+        <input class="radio" type="radio" name="group1">Male</input><br>
+        <input class="radio" type="radio" name="group1">Female</input><br>
+        <input class="radio" type="radio" name="group1">Prefer not to say</input>
+        <br><br>
+        <label>Nature : </label><br>
+        <div class="checkbox">
+            <input type="checkbox">Kind</input><br>
+            <input type="checkbox">Positive Attitude</input><br>
+            <input type="checkbox">Humble</input><br>
+            <input type="checkbox">Passonate</input><br>
+            <input type="checkbox">Certeous</input>
+        </div>
+        
+        <br><br>
+        <label>Commnet : </label><br>
+        <textarea cols="30" rows="10"></textarea><br><br>
+
+        <button id="submit" type="submit">Submit</button>
+    </form>
+
+    <!-- <script>
+        function checkall(){
+            var number = document.getElementById("number").value;
+
+            if(number==="")
+            {
+                alert("Please enter number");
+            }
+        }
+    </script> -->
+</body>
+</html>
